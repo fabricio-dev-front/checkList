@@ -5,120 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/App.js" defer></script>
-    <title></title>
+    <title>teste to do list</title>
 </head>
 <body>
-    <div class="container">
-         <div>
-            <h1>Progress Check-in</h1>
-         </div>
-
-         <section id="boxSectionDay">
-            <div class="diaSemana" id="segunda">
-                <div>
-                    <h3>Segunda Feira</h3>
-                </div>
-                <div>
-                    <input type="text" placeholder="Informe sua perdencia">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
-                        </svg>
+    <div class="boxMovel">
+        <h1>To Do List</h1>
+        <form class="formInput">
+            <input class="inputTask" type="text" placeholder="Informe a proximatarefa:">
+            <button type="submit" class="btnSubmit" title="click para enviar a próxima tarefa">
+                <img src="/img/add.svg" alt="">
+            </button>
+        </form>
+        <ul class="listTarefas">
+            <div>
+                <li>primeira tarefa</li>
+                <div class="checkBox">
+                    <button class="done">
+                       <img src="/img/done.svg" alt="">
+                    </button>
+                    <button class="delete">
+                        <img src="/img/delete.svg" alt="">
                     </button>
                 </div>
-                <div class="boxList">
-                    <ul>
-                        <li>afazer1</li>
-                        <li>afazer2</li>
-                        <li>afazer3</li>
-                    </ul>
-                </div>
             </div>
-
-            <div class="diaSemana" id="terca">
-                <div>
-                    <h3>Terça Feira</h3>
-                </div>
-                <div>
-                    <input type="text" placeholder="Informe sua perdencia">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
-                        </svg>
+            <div>
+                <li>segunda tarefa</li>
+                <div class="checkBox">
+                    <button class="done">
+                        <img src="/img/done.svg" alt="">
+                    </button>
+                    <button class="delete">
+                        <img src="/img/delete.svg" alt="">
                     </button>
                 </div>
-                <div class="boxList">
-                    <ul>
-                        <li>afazer1</li>
-                        <li>afazer2</li>
-                        <li>afazer3</li>
-                    </ul>
-                </div>
             </div>
-
-            <div class="diaSemana" id="quarta">
-                <div>
-                    <h3>Quarta Feira</h3>
-                </div>
-                <div>
-                    <input type="text" placeholder="Informe sua perdencia">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="boxList">
-                    <ul>
-                        <li>afazer1</li>
-                        <li>afazer2</li>
-                        <li>afazer3</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="diaSemana" id="quinta">
-                <div>
-                    <h3>Quinta Feira</h3>
-                </div>
-                <div>
-                    <input type="text" placeholder="Informe sua perdencia">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="boxList">
-                    <ul>
-                        <li>afazer1</li>
-                        <li>afazer2</li>
-                        <li>afazer3</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="diaSemana" id="sexta">
-                <div>
-                    <h3>Sexta Feira</h3>
-                </div>
-                <div>
-                    <input type="text" placeholder="Informe sua perdencia">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="boxList">
-                    <ul>
-                        <li>afazer1</li>
-                        <li>afazer2</li>
-                        <li>afazer3</li>
-                    </ul>
-                </div>
-            </div>
-         </section>
+        </ul>
     </div>
 </body>
 </html>
