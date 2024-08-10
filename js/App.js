@@ -2,8 +2,6 @@ const input = document.querySelector('.inputTask');
 const btnAdd = document.querySelector('.btnSubmit');
 const ulList = document.querySelector('.listTarefas');
 
-const done = document.querySelector('.done');
-
 function newTaskAdded(){
     let ArrayList = [];
 
