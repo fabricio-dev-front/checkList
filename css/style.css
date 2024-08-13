@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    box-sizing: border-box;
     font-family: monospace;
     outline: none;
 }
@@ -25,7 +26,7 @@ body{
     align-items: center;
     background-image: url(/img/fundoMain.jpg);
     background-position: center;
-    background-size: cover;
+    background-size: auto;
 }
 
 .boxMovel{
@@ -87,6 +88,8 @@ body{
 
 .listTarefas li{
     height: 50px;
+    padding: 0 10px;
+    border-radius: var(--borderRadius--);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -135,39 +138,25 @@ p{
     cursor: pointer;
 }
 
+.taksConcluida{
+    text-decoration: line-through;
+    background-color: #9200faa6;
+}
+
+.taksConcluida p{
+    /* color: dimgrey; */
+}
+
 /* --- responsividade --- */
 
 @media(max-width: 760px){
-    .boxMovel{
-        backdrop-filter: none;
-        margin: 0 10px 0 10px;
-    }
-
-    .formInput{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .listTarefas div{
+    .divInput{
         display: block;
-        margin-bottom: 30px;
-        border-bottom: none;
     }
 
-    .checkBox{
-        margin-top: 1rem;
-        border-left: none;
-    }
-
-    .checkBox button{
-        display: inline-block;
-        padding: 5px 10px;
-        margin-left: 10px;
-    }
-
-    li{
-        font-size: 20px;
+    .inputTask{
+        width: 100%;
+        margin-bottom: 15px;
     }
         
 }

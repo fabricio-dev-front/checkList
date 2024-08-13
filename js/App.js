@@ -2,37 +2,51 @@ const input = document.querySelector('.inputTask');
 const btnAdd = document.querySelector('.btnSubmit');
 const ulList = document.querySelector('.listTarefas');
 
-function newTaskAdded(){
-    let ArrayList = [];
+let arrayList = [];
 
-    function enviarNovaTarefa(){
-        ArrayList.push(input.value);
-        showTask();
+function main(){
+    if(input.value === ''){
+        alert('você precisa adicionar alguma tarefa');
+    } else {
+        arrayList.push({
+            tarefa: input.value,
+            concluida: false,
+        });
+        input.value = '';
+
+        newTask();
     }
+}
 
-    function showTask(){
-        let novaTare = '';
-        
-        ArrayList.forEach((tarefa) => {
-            novaTare = novaTare + `
-            <li>
-                <p>${tarefa}</p>
+function newTask(){
+    let novaTarefa = '';
 
+    arrayList.forEach((item, index) => {
+        novaTarefa = novaTarefa + `
+            <li class="${item.concluida && "taksConcluida"}">
+                <p>${item.tarefa}</p>
                 <div class="checkBox">
                     <button class="done">
-                        <img src="/img/done.svg" alt="">
+                        <img src="/img/done.svg" onclick="taskCompleted(${index})">
                     </button>
                     <button class="delete">
-                        <img src="/img/delete.svg" alt="">
+                        <img src="/img/delete.svg" onclick="deleteTask(${index})">
                     </button>
                 </div>
             </li>
-            `;
-        });
-
-        ulList.innerHTML = novaTare;
-    }
-
-    btnAdd.addEventListener('click', enviarNovaTarefa);
+        `;
+    });
+    ulList.innerHTML = novaTarefa;
 }
-newTaskAdded();
+
+function taskCompleted(index){
+    arrayList[index].concluida = !arrayList[index].concluida;
+    newTask();
+}
+
+function deleteTask(index){
+    arrayList.splice(index, 1);
+    newTask();
+}
+
+btnAdd.addEventListener('click', main);
