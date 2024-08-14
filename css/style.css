@@ -30,10 +30,14 @@ body{
 }
 
 .boxMovel{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
     width: 500px;
     height: 500px;
     border-radius: var(--borderRadius--);
-    text-align: center;
 }
 
 .boxMovel h1{
@@ -55,7 +59,7 @@ body{
 .inputTask{
     border: none;
     font-size: 15px;
-    height: 25px;
+    height: 35px;
     padding: 0.5rem;
     border-radius: var(--borderRadius--);
     width: 240px;
@@ -88,16 +92,18 @@ body{
 
 .listTarefas li{
     height: 50px;
+    width: 300px;
     padding: 0 10px;
     border-radius: var(--borderRadius--);
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid var(--colorTraparent--);
 }
 
 p{
     color: white;
+    overflow: hidden;
     font-size: 1.5rem;
 }
 
@@ -143,19 +149,15 @@ p{
     background-color: #9200faa6;
 }
 
-.taksConcluida p{
-    /* color: dimgrey; */
-}
-
 /* --- responsividade --- */
 
 @media(max-width: 760px){
     .divInput{
-        display: block;
+        flex-direction: column;
     }
 
     .inputTask{
-        width: 100%;
+        /* width: 100%; */
         margin-bottom: 15px;
     }
         
