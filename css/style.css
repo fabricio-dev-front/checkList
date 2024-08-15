@@ -15,8 +15,8 @@
     --vermelho1--: #FF0000;
     --vermelho2--: #8B0000;
 
-    --verde1--: #32CD32;
-    --verde2--: #006400;
+    --verde1--: #141414;
+    --verde2--: #000000;
 }
 
 body{
@@ -25,18 +25,19 @@ body{
     justify-content: center;
     align-items: center;
     background-image: url(/img/fundoMain.jpg);
+    background-repeat: no-repeat;
     background-position: center;
-    background-size: auto;
+    background-size: cover;
 }
 
 .boxMovel{
-    /* border: 2px solid red; */
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     width: 500px;
-    height: 500px;
+    background-color: #00090356;
+    /* overflow-y: scroll; */
     border-radius: var(--borderRadius--);
 }
 
@@ -44,7 +45,7 @@ body{
     margin-top: 2rem;
     font-size: 2.5rem;
     font-weight: 800;
-    color: white;
+    color: whitesmoke;
 }
 
 .divInput{
@@ -58,21 +59,20 @@ body{
 
 .inputTask{
     border: none;
-    font-size: 15px;
-    height: 35px;
-    padding: 0.5rem;
+    font-size: 1rem;
+    padding: 1rem;
     border-radius: var(--borderRadius--);
     width: 240px;
 }
 
 .btnSubmit{
-    height: 37px;
-    font-weight: 800;
-    font-size: 17px;
-    padding: 0.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem 2rem;
     border: none;
     background-color: var(--verde1--);
-    color: white;
+    color: whitesmoke;
     border-radius: var(--borderRadius--);
     transition: .4s;
 }
@@ -92,17 +92,27 @@ body{
 
 .listTarefas li{
     height: 50px;
-    width: 300px;
     padding: 0 10px;
     border-radius: var(--borderRadius--);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--colorTraparent--);
+    animation: interacoaLi .4s ease-in-out forwards; 
+}
+
+@keyframes interacoaLi {
+    from{
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+    } to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 p{
-    color: white;
+    color: whitesmoke;
     overflow: hidden;
     font-size: 1.5rem;
 }
@@ -146,19 +156,26 @@ p{
 
 .taksConcluida{
     text-decoration: line-through;
-    background-color: #9200faa6;
+    background-color: rgba(0, 0, 0, 0.455);
+    color: green;
 }
 
 /* --- responsividade --- */
-
 @media(max-width: 760px){
+    .boxMovel{
+        margin: 0 20px !important;
+    }
+
+    .listTarefas li{
+        width: 220px;
+    }
+
     .divInput{
         flex-direction: column;
     }
 
     .inputTask{
-        /* width: 100%; */
         margin-bottom: 15px;
-    }
-        
+        padding: 1rem;
+    }  
 }
