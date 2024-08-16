@@ -83,7 +83,7 @@ body{
 }
 
 .listTarefas{
-    margin: 3rem 2rem 3rem 2rem;
+    margin: 3rem 2rem;
     display: flex;
     padding: 10px 50px;
     flex-direction: column;
@@ -157,6 +157,7 @@ p{
 .taksConcluida{
     text-decoration: line-through;
     background-color: rgba(0, 0, 0, 0.455);
+    color: rgba(245, 245, 245, 0.408);
     color: green;
 }
 
@@ -164,6 +165,11 @@ p{
 @media(max-width: 760px){
     .boxMovel{
         margin: 0 20px !important;
+    }
+
+    .listTarefas{
+        align-items: center;
+        padding: 10px 20px;
     }
 
     .listTarefas li{
