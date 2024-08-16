@@ -53,7 +53,8 @@ body{
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin: 2rem;
+    margin: 0 2rem;
+    /* border: 1px solid red; */
     padding: 1rem 2rem;
 }
 
@@ -83,7 +84,7 @@ body{
 }
 
 .listTarefas{
-    margin: 3rem 2rem;
+    margin: 2rem 2rem;
     display: flex;
     padding: 10px 50px;
     flex-direction: column;
@@ -126,12 +127,24 @@ p{
     border-left: 1px solid var(--colorTraparent--);
 }
 
-.done, .delete{
-    padding: 5px;
+.done{
     border-radius: var(--borderRadius--);
     border: none;
-    color: white;
     transition: .4s;
+}
+
+.done img{
+    padding: 5px 10px;
+}
+
+.delete{
+    border-radius: var(--borderRadius--);
+    border: none;
+    transition: .4s;
+}
+
+.delete img{
+    padding: 5px 10px;
 }
 
 .done{
@@ -157,7 +170,6 @@ p{
 .taksConcluida{
     text-decoration: line-through;
     background-color: rgba(0, 0, 0, 0.455);
-    color: rgba(245, 245, 245, 0.408);
     color: green;
 }
 
