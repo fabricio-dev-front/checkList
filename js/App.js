@@ -37,6 +37,8 @@ function newTask(){
         `;
     });
     ulList.innerHTML = novaTarefa;
+
+    localStorage.setItem('listaTarefas', JSON.stringify(arrayList));
 }
 
 function taskCompleted(index){
@@ -49,4 +51,15 @@ function deleteTask(index){
     newTask();
 }
 
+function reloadTask(){
+    const taskLocalStorage = localStorage.getItem('listaTarefas');
+
+    if(taskLocalStorage){
+        arrayList = JSON.parse(taskLocalStorage);
+    }
+
+    newTask();
+}
+
+reloadTask();
 btnAdd.addEventListener('click', main);
