@@ -37,7 +37,6 @@ body{
     text-align: center;
     width: 500px;
     background-color: #00090356;
-    /* overflow-y: scroll; */
     border-radius: var(--borderRadius--);
 }
 
@@ -54,7 +53,6 @@ body{
     justify-content: center;
     gap: 15px;
     margin: 0 2rem;
-    /* border: 1px solid red; */
     padding: 1rem 2rem;
 }
 
