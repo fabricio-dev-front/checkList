@@ -13,7 +13,6 @@ function main(){
             concluida: false,
         });
         input.value = '';
-
         newTask();
     }
 }
@@ -37,7 +36,7 @@ function newTask(){
         `;
     });
     ulList.innerHTML = novaTarefa;
-
+    
     localStorage.setItem('listaTarefas', JSON.stringify(arrayList));
 }
 
@@ -57,7 +56,6 @@ function reloadTask(){
     if(taskLocalStorage){
         arrayList = JSON.parse(taskLocalStorage);
     }
-
     newTask();
 }
 
